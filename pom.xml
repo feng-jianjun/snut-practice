@@ -11,6 +11,7 @@
         <module>snut-payment8001</module>
         <module>snut-order80</module>
         <module>snut-common</module>
+        <module>snut-eureka7001</module>
     </modules>
     <packaging>pom</packaging>
 
