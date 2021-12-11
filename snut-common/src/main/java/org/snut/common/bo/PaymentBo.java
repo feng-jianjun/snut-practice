@@ -1,4 +1,4 @@
-package org.snut.order.dto;
+package org.snut.common.bo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,8 +14,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PaymentDto implements Serializable {
-
+public class PaymentBo implements Serializable {
     private Long id;
 
     private String serial;

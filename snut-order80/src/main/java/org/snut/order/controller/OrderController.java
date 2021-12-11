@@ -1,8 +1,8 @@
 package org.snut.order.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.snut.order.dto.CommonResult;
-import org.snut.order.dto.PaymentDto;
+import org.snut.common.bo.CommonResult;
+import org.snut.common.bo.PaymentBo;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -23,13 +23,13 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @PostMapping("/consumer/payment/create")
-    public CommonResult<PaymentDto> create(PaymentDto dto) {
+    public CommonResult<PaymentBo> create(PaymentBo dto) {
 
         return restTemplate.postForObject(PaymentUrl + "/payment/create", dto, CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/get/{id}")
-    public CommonResult<PaymentDto> getPayment(@PathVariable("id") Long id) {
+    public CommonResult<PaymentBo> getPayment(@PathVariable("id") Long id) {
 
         log.info("调用地址：" + PaymentUrl + "/payment/get/" + id);
         return restTemplate.getForObject(PaymentUrl + "/payment/get/" + id, CommonResult.class);

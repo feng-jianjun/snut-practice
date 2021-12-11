@@ -9,7 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>snut-payment8001</module>
-        <module>snut-order</module>
+        <module>snut-order80</module>
+        <module>snut-common</module>
     </modules>
     <packaging>pom</packaging>
 

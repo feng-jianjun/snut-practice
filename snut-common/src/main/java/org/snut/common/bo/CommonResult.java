@@ -1,4 +1,4 @@
-package org.snut.order.dto;
+package org.snut.common.bo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
