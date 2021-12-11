@@ -4,10 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.snut.payment.dto.CommonResult;
 import org.snut.payment.entities.Payment;
 import org.snut.payment.service.PaymentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -23,7 +20,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult<Integer> create(Payment entity) {
+    public CommonResult<Integer> create(@RequestBody Payment entity) {
 
         int id = paymentService.create(entity);
 
