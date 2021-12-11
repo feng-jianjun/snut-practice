@@ -13,5 +13,5 @@ spring:
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: org.snut.payment.entities
+  type-aliases-package: com.snut.payment.entities
 
