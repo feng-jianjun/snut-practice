@@ -87,7 +87,9 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--开启热部署-->
     <build>
+        <finalName>snut-practice</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

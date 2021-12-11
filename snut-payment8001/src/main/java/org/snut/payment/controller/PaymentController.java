@@ -23,7 +23,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult create(Payment entity) {
+    public CommonResult<Integer> create(Payment entity) {
 
         int id = paymentService.create(entity);
 
@@ -37,7 +37,7 @@ public class PaymentController {
     }
 
     @GetMapping(value = "/payment/get/{id}")
-    public CommonResult getPaymentById(@PathVariable("id") Long id) {
+    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
 
         Payment payment = paymentService.selectOneById(id);
         log.info("**********查询结果：" + payment);
